@@ -34,6 +34,12 @@ set noswapfile
 " Flash instead of beep
 set visualbell
 
+" Tab settings
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+
 """ Appearance
 syntax enable
 "let g:solarized_termcolors = 256
