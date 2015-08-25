@@ -26,3 +26,6 @@ alias rm="nocorrect rm"
 
 # less options
 export LESS='-giMRSw -z-4'
+
+# Autoload functions
+autoload zmv
