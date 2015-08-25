@@ -18,8 +18,11 @@ export VISUAL="vim"
 alias l="ls"
 alias ll="ls -lh"
 alias lll="ls -lah"
+
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ."
+
+alias rm="nocorrect rm"
 
 # less options
 export LESS='-giMRSw -z-4'
