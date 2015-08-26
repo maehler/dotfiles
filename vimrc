@@ -47,6 +47,9 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" Show ruler at 72 chars
+set colorcolumn=72
+
 " Use line numbers
 set number
 
