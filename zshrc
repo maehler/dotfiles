@@ -24,6 +24,11 @@ alias stt="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ."
 
 alias rm="nocorrect rm"
 
+# Pretty viewing of tab delimited files
+tless() {
+    column -t "$1" | less
+}
+
 # less options
 export LESS='-giMRSw -z-4'
 
