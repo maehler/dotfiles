@@ -35,10 +35,12 @@ set noswapfile
 set visualbell
 
 " Tab settings
-set tabstop=4
-set shiftwidth=4
+set tabstop=8
 set expandtab
+set shiftwidth=4
+set softtabstop=4
 set smarttab
+filetype indent plugin on
 
 """ Appearance
 syntax enable
