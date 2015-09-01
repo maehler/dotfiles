@@ -29,3 +29,6 @@ export LESS='-giMRSw -z-4'
 
 # Autoload functions
 autoload zmv
+
+# Don't ask before overwriting files with redirection
+setopt clobber
