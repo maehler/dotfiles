@@ -6,7 +6,7 @@ On Mac I use [iTerm2](https://www.iterm2.com/) with the Solarized Dark theme fro
 
 ## zsh
 
-My preferred shell is zsh. If it's not installed, I stick with bash.
+My preferred shell is zsh. If it's not installed and I don't have administrator rights, I stick with bash.
 
     chsh -s /usr/bin/zsh
 
