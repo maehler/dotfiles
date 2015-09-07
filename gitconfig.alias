@@ -3,3 +3,4 @@
     d = diff
     dc = diff --cached
     ci = commit
+    hist = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
