@@ -37,3 +37,8 @@ autoload zmv
 
 # Don't ask before overwriting files with redirection
 setopt clobber
+
+# Add home bin folder to path if it exists
+if [ -d "$HOME/bin" ]; then
+    export PATH="$HOME/bin:$PATH"
+fi
