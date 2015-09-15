@@ -32,6 +32,13 @@ tless() {
     column -t "$1" | less
 }
 
+# md5 function with output that matches md5sum
+if ! type md5sum >/dev/null 2>&1 && type md5 >/dev/null 2>&1; then
+    md5sum() {
+        md5 -r $@ | awk '{sub(" +", "  "); print $0}'
+    }
+fi
+
 # less options
 export LESS='-giMRSw -z-4'
 
