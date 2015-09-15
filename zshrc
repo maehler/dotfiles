@@ -19,6 +19,9 @@ alias l="ls"
 alias ll="ls -lh"
 alias lll="ls -lah"
 
+alias ..="cd .."
+alias ...="cd ../.."
+
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ."
 
