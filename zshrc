@@ -57,3 +57,8 @@ fi
 if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
     source "/usr/local/bin/virtualenvwrapper.sh"
 fi
+
+# Add local settings if they exist
+if [ -f "$HOME/.zsh_local" ]; then
+    source "$HOME/.zsh_local"
+fi
