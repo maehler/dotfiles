@@ -25,7 +25,7 @@ alias ...="cd ../.."
 alias st="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias stt="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ."
 
-alias rm="nocorrect rm"
+unsetopt CORRECT
 
 # Pretty viewing of tab delimited files
 tless() {
