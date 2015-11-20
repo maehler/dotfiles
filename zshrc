@@ -19,6 +19,10 @@ alias l="ls"
 alias ll="ls -lh"
 alias lll="ls -lah"
 
+if [[ $(uname) == "Darwin" ]]; then
+    alias zcat="gunzip -c"
+fi
+
 alias ..="cd .."
 alias ...="cd ../.."
 
