@@ -19,6 +19,8 @@ alias l="ls"
 alias ll="ls -lh"
 alias lll="ls -lah"
 
+alias rm="nocorrect rm"
+
 if [[ $(uname) == "Darwin" ]]; then
     alias zcat="gunzip -c"
 fi
