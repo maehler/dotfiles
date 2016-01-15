@@ -25,6 +25,7 @@ Plugin 'bling/vim-airline'
 Plugin 'powerline/fonts'
 
 " R syntax
+Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'vim-scripts/Vim-R-plugin'
 
 filetype plugin indent on
