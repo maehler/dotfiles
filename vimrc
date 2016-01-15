@@ -24,6 +24,9 @@ Plugin 'bling/vim-airline'
 " Powerline fonts
 Plugin 'powerline/fonts'
 
+" R syntax
+Plugin 'vim-scripts/Vim-R-plugin'
+
 filetype plugin indent on
 
 """ General config
