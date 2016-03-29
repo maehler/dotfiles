@@ -89,3 +89,7 @@ fi
 if [ -f "$HOME/.zsh_local" ]; then
     source "$HOME/.zsh_local"
 fi
+
+# Fix locale settings
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
