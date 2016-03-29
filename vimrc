@@ -27,6 +27,8 @@ Plugin 'powerline/fonts'
 " R syntax
 Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'vim-scripts/Vim-R-plugin'
+" Don't replace underscore with assignment
+let vimrplugin_assign=0
 
 filetype plugin indent on
 
