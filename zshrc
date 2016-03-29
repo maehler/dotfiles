@@ -49,6 +49,23 @@ if ! type md5sum >/dev/null 2>&1 && type md5 >/dev/null 2>&1; then
     }
 fi
 
+# Convert excel csv/tsv files to unix
+excel2unix() {
+    if [[ $# < 1 ]]; then
+        echo >&2 "usage: $0 <infile> [<outfile>]"
+    elif [[ ! -f "$1" ]]; then
+        echo >&2 "error: file or directory not found: $1"
+    elif [[ $# > 1 && ! -d $(dirname "$2") ]]; then
+        echo >&2 "error: file or directory not found: $2"
+    fi
+
+    if [[ $# == 1 ]]; then
+        tr '\r' '\n' < "$1" | sed -e '$a\'
+    else
+        tr '\r' '\n' < "$1" | sed -e '$a\' > "$2"
+    fi
+}
+
 # less options
 export LESS='-giMRSw -z-4'
 
