@@ -67,7 +67,8 @@ excel2unix() {
 }
 
 # less options
-export LESS='-giMRSw -z-4'
+export LESS='-giMRw -z-4'
+alias lless='less -S'
 
 # Autoload functions
 autoload zmv
