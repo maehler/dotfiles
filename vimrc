@@ -19,10 +19,13 @@ Plugin 'xolox/vim-reload'
 Plugin 'altercation/vim-colors-solarized'
 
 " Default status line
-Plugin 'bling/vim-airline'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 
 " Powerline fonts
 Plugin 'powerline/fonts'
+
+" Emmet
+Plugin 'mattn/emmet-vim'
 
 " R syntax
 Plugin 'jalvesaq/R-Vim-runtime'
@@ -50,10 +53,22 @@ filetype indent plugin on
 
 """ Appearance
 syntax enable
-"let g:solarized_termcolors = 256
-"let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
+
+set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
+set enc=utf-8
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+
+if has("gui_running")
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
+    endif
+endif
 
 " Show ruler at 72 chars
 set colorcolumn=72
@@ -63,6 +78,3 @@ set number
 
 " Highlight the line where the cursor is
 set cursorline
-
-" Airline settings
-let g:airline_powerline_fonts = 1
