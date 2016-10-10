@@ -94,3 +94,7 @@ fi
 # Fix locale settings
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+if [ -f "$HOME/.zshrc-local" ]; then
+    source "$HOME/.zshrc-local"
+fi
