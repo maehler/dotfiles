@@ -7,6 +7,7 @@ alias l='ls'
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # gzipped files
 alias zcat="gunzip -c"
