@@ -15,8 +15,14 @@ Plugin 'gmarik/vundle'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-reload'
 
+" Auto pairing of brackets
+Plugin 'jiangmiao/auto-pairs'
+
 " Nice vim colorscheme
 Plugin 'altercation/vim-colors-solarized'
+
+" Editor config
+Plugin 'editorconfig/editorconfig-vim'
 
 " Default status line
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
