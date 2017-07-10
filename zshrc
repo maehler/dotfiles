@@ -94,7 +94,19 @@ fi
 # Fix locale settings
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export LC_TIME=sv_SE.UTF-8
 
 if [ -f "$HOME/.zshrc-local" ]; then
     source "$HOME/.zshrc-local"
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+function frameworkpython {
+    if [[ ! -z "$VIRTUAL_ENV" ]]; then
+        PYTHONHOME=$VIRTUAL_ENV /usr/local/bin/python "$@"
+    else
+        /usr/local/bin/python "$@"
+    fi
+}

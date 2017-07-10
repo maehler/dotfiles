@@ -15,14 +15,22 @@ Plugin 'gmarik/vundle'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-reload'
 
+" Notes
+Plugin 'xolox/vim-notes'
+
 " Auto pairing of brackets
 Plugin 'jiangmiao/auto-pairs'
 
-" Nice vim colorscheme
+" Nice vim colorschemes
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jdkanani/vim-material-theme'
 
 " Editor config
 Plugin 'editorconfig/editorconfig-vim'
+
+" JavaScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'maksimr/vim-jsbeautify'
 
 " Default status line
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
@@ -33,13 +41,43 @@ Plugin 'powerline/fonts'
 " Emmet
 Plugin 'mattn/emmet-vim'
 
+" Surround
+Plugin 'tpope/vim-surround'
+
+" Python indentation
+Plugin 'vim-scripts/indentpython.vim'
+
+" Distraction free writing
+Plugin 'mikewest/vimroom'
+let g:vimroom_background='gray'
+let g:vimroom_clear_line_numbers=0
+
 " R syntax
 Plugin 'jalvesaq/R-Vim-runtime'
 Plugin 'vim-scripts/Vim-R-plugin'
+let r_indent_ess_compatible = 0
+
 " Don't replace underscore with assignment
 let vimrplugin_assign=0
 
-filetype plugin indent on
+"filetype plugin indent on
+
+" Python indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" Markdown stuff
+au BufNewFile,BufRead,FileType markdown
+    \ set wrap |
+    \ set linebreak |
+    \ set nolist |
+    \ set syntax=markdown
 
 """ General config
 
@@ -58,29 +96,26 @@ set smarttab
 filetype indent plugin on
 
 """ Appearance
+set termguicolors
 syntax enable
 set background=dark
-colorscheme solarized
-
-set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
-let g:Powerline_symbols = 'fancy'
-set t_Co=256
-set enc=utf-8
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-
-if has("gui_running")
-    let s:uname = system("uname")
-    if s:uname == "Darwin\n"
-        set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
-    endif
-endif
-
-" Show ruler at 72 chars
-set colorcolumn=72
+colorscheme material-theme
 
 " Use line numbers
 set number
 
+set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h16
+let g:Powerline_symbols = 'fancy'
+set t_Co=256
+set enc=utf-8
+set fillchars+=stl:\ ,stlnc:\
+
+" Show ruler at 72 chars
+" set colorcolumn=72
+
 " Highlight the line where the cursor is
 set cursorline
+
+" Note settings
+let g:notes_directories = ['~/Dropbox/Notes']
+let g:notes_conceal_italic = 1
