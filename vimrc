@@ -24,6 +24,7 @@ Plugin 'jiangmiao/auto-pairs'
 " Nice vim colorschemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jdkanani/vim-material-theme'
+Plugin 'dracula/vim'
 
 " Editor config
 Plugin 'editorconfig/editorconfig-vim'
@@ -99,7 +100,7 @@ filetype indent plugin on
 set termguicolors
 syntax enable
 set background=dark
-colorscheme material-theme
+colorscheme dracula
 
 " Use line numbers
 set number
