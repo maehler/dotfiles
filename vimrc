@@ -34,10 +34,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'maksimr/vim-jsbeautify'
 
 " Default status line
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
-
-" Powerline fonts
-Plugin 'powerline/fonts'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Emmet
 Plugin 'mattn/emmet-vim'
@@ -97,7 +95,6 @@ set smarttab
 filetype indent plugin on
 
 """ Appearance
-set termguicolors
 syntax enable
 set background=dark
 colorscheme dracula
@@ -105,8 +102,6 @@ colorscheme dracula
 " Use line numbers
 set number
 
-set guifont=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h16
-let g:Powerline_symbols = 'fancy'
 set t_Co=256
 set enc=utf-8
 set fillchars+=stl:\ ,stlnc:\
