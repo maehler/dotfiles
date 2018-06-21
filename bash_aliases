@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Useful aliases
-alias ls='ls -G'
 alias ll='ls -lh'
 alias lla='ls -lha'
 alias l='ls'
