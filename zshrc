@@ -81,11 +81,6 @@ if [ -d "$HOME/bin" ]; then
     export PATH="$HOME/bin:$PATH"
 fi
 
-# Load python's virtualenvwrapper if it exists
-if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
-    source "/usr/local/bin/virtualenvwrapper.sh"
-fi
-
 # Add local settings if they exist
 if [ -f "$HOME/.zsh_local" ]; then
     source "$HOME/.zsh_local"
