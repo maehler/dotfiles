@@ -115,3 +115,9 @@ set cursorline
 " Note settings
 let g:notes_directories = ['~/Dropbox/Notes']
 let g:notes_conceal_italic = 1
+
+" Crontab
+if $VIM_CRONTAB == 1
+    set nobackup
+    set nowritebackup
+endif
