@@ -18,9 +18,6 @@ Plugin 'xolox/vim-reload'
 " Notes
 Plugin 'xolox/vim-notes'
 
-" Auto pairing of brackets
-Plugin 'jiangmiao/auto-pairs'
-
 " Nice vim colorschemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jdkanani/vim-material-theme'
