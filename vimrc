@@ -15,13 +15,11 @@ Plugin 'gmarik/vundle'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-reload'
 
-" Notes
-Plugin 'xolox/vim-notes'
-
 " Nice vim colorschemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jdkanani/vim-material-theme'
 Plugin 'dracula/vim'
+Plugin 'wmvanvliet/vim-blackboard'
 
 " Editor config
 Plugin 'editorconfig/editorconfig-vim'
@@ -97,7 +95,7 @@ filetype indent plugin on
 """ Appearance
 syntax enable
 set background=dark
-colorscheme dracula
+colorscheme blackboard
 
 " Use line numbers
 set number
