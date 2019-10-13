@@ -40,6 +40,7 @@ Plugin 'mattn/emmet-vim'
 
 " Surround
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " Python indentation
 Plugin 'vim-scripts/indentpython.vim'
