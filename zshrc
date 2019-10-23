@@ -17,7 +17,9 @@ export VISUAL="vim"
 
 alias l="ls"
 alias ll="ls -lh"
+alias lt="ls -lht"
 alias lll="ls -lah"
+alias llt="ls -laht"
 
 alias rm="nocorrect rm"
 
