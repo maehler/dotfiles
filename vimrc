@@ -77,6 +77,13 @@ au BufNewFile,BufRead,FileType markdown
     \ set nolist |
     \ set syntax=markdown
 
+" tsv
+au BufNewFile,BufRead *.tsv
+    \ set autoindent |
+    \ set noexpandtab |
+    \ set tabstop=4 |
+    \ set shiftwidth=4
+
 """ General config
 
 " Don't use swap files
