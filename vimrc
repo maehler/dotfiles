@@ -84,6 +84,10 @@ au BufNewFile,BufRead *.tsv
     \ set tabstop=4 |
     \ set shiftwidth=4
 
+" Snakemake
+au BufNewFile,BufRead *.smk
+    \ set syntax=snakemake
+
 """ General config
 
 " Don't use swap files
