@@ -42,6 +42,9 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 
+" Commenting
+Plugin 'tpope/vim-commentary'
+
 " Python indentation
 Plugin 'vim-scripts/indentpython.vim'
 
