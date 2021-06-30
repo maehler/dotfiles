@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Useful aliases
-alias ll='ls -lh'
-alias lla='ls -lha'
+alias ls='ls --color=auto'
+alias ll='ls --color=auto -lh'
+alias lla='ls --color=auto -lha'
+alias lll='lla'
 alias l='ls'
 alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 alias ..="cd .."
