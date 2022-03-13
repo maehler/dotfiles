@@ -27,10 +27,3 @@ In order for my default profile to look decent, I need the powerline adapted fon
     cd powerline-fonts
     ./install.sh
 
-## vim
-
-For managing vim packages, I use [Vundle](https://github.com/VundleVim/Vundle.vim). For this to work with the existing .vimrc file, use this command for installation:
-
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
-
-Also, for colours to be displayed correctly, vim 8.0 or higher is needed.

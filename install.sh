@@ -13,3 +13,24 @@ if [ ! -e "$HOME/.gitconfig" ] || \
         "${HOME}/.gitconfig"
 fi
 
+# Install vim config
+if [ -f ${HOME}/.vimrc ]; then
+	mv ${HOME}/.vimrc{,-bkp}
+fi
+
+if [ ! -d ${HOME}/.vim ]; then
+	mkdir ${HOME}/.vim
+fi
+
+if [ ! -d ${HOME}/.vim/ftplugin ]; then
+	mkdir ${HOME}/.vim/ftplugin
+fi
+
+if [ ! -d ${HOME}/.vim/ftdetect ]; then
+	mkdir ${HOME}/.vim/ftdetect
+fi
+
+cp ${DOTFILE_PATH}/vimrc ${HOME}/.vimrc
+cp ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
+cp ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
+
