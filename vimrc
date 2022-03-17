@@ -5,6 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'jnurmine/Zenburn'
