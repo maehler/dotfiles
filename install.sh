@@ -30,7 +30,7 @@ if [ ! -d ${HOME}/.vim/ftdetect ]; then
 	mkdir ${HOME}/.vim/ftdetect
 fi
 
-cp ${DOTFILE_PATH}/vimrc ${HOME}/.vimrc
-cp ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
-cp ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
+ln -srf ${DOTFILE_PATH}/vimrc ${HOME}/.vimrc
+ln -srf ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
+ln -srf ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
 
