@@ -34,3 +34,9 @@ ln -srf ${DOTFILE_PATH}/vimrc ${HOME}/.vimrc
 ln -srf ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
 ln -srf ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
 
+# Install nvim config
+if [ ! -d ${HOME}/.config/nvim ]; then
+    mkdir -p ${HOME}/.config/nvim
+fi
+
+ln -srf ${DOTFILE_PATH}/nvim/{init.lua,lua,after} ${HOME}/.config/nvim/
