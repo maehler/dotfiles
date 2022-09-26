@@ -34,9 +34,15 @@ ln -srf ${DOTFILE_PATH}/vimrc ${HOME}/.vimrc
 ln -srf ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
 ln -srf ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
 
-# Install nvim config
+# Install neovim config
 if [ ! -d ${HOME}/.config/nvim ]; then
     mkdir -p ${HOME}/.config/nvim
 fi
 
 ln -srf ${DOTFILE_PATH}/nvim/{init.lua,lua,after} ${HOME}/.config/nvim/
+
+# Packer for neovim
+if [ ! -d /home/nima18/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
