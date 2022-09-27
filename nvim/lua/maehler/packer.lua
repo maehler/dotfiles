@@ -13,5 +13,7 @@ return require("packer").startup(function()
     use "nvim-telescope/telescope.nvim"
     use "kyazdani42/nvim-web-devicons"
     use "nvim-treesitter/nvim-treesitter"
+
+    use "feline-nvim/feline.nvim"
 end)
 
