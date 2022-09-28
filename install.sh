@@ -39,7 +39,10 @@ if [ ! -d ${HOME}/.config/nvim ]; then
     mkdir -p ${HOME}/.config/nvim
 fi
 
-ln -srf ${DOTFILE_PATH}/nvim/{init.lua,lua,after} ${HOME}/.config/nvim/
+ln \
+    -srf \
+    ${DOTFILE_PATH}/nvim/{init.lua,lua,after,data} \
+    ${HOME}/.config/nvim/
 
 # Packer for neovim
 if [ ! -d /home/nima18/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then

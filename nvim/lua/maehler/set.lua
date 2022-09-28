@@ -12,4 +12,6 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
+vim.opt.modeline = false
+
 vim.g.mapleader = " "
