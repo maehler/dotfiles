@@ -1,5 +1,10 @@
-vim.g.tokyonight_transparent_sidebar = true
-vim.g.tokyonight_transparent = true
+require("gruvbox").setup({
+    bold = true,
+    italic = true,
+    transparent_mode = true,
+    contrast = "",
+})
+
 vim.opt.background = "dark"
 
 vim.cmd("colorscheme gruvbox")

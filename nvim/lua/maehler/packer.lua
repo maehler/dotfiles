@@ -5,7 +5,7 @@ return require("packer").startup(function()
 	use "wbthomason/packer.nvim"
 
     use "folke/tokyonight.nvim"
-    use "gruvbox-community/gruvbox"
+    use "ellisonleao/gruvbox.nvim"
 
     use "tpope/vim-surround"
 
