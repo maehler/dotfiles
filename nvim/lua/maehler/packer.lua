@@ -29,5 +29,8 @@ return require("packer").startup(function()
         "snakemake/snakemake",
         rtp = "misc/vim"
     }
+    use {
+        "yuezk/vim-js",
+    }
 end)
 
