@@ -27,10 +27,13 @@ return require("packer").startup(function()
     -- Languages
     use {
         "snakemake/snakemake",
-        rtp = "misc/vim"
+        rtp = "misc/vim",
     }
     use {
         "yuezk/vim-js",
+    }
+    use {
+        "Mxrcon/nextflow-vim",
     }
 end)
 
