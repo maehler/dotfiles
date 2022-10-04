@@ -15,3 +15,12 @@ vim.opt.wrap = false
 vim.opt.modeline = false
 
 vim.g.mapleader = " "
+
+-- Temporary fix for the Snakemake plugin. For some
+-- weird reason the filetype is not properly set when
+-- files are opened, but they show up fine in Telescope,
+-- for example.
+vim.cmd [[
+au BufNewFile,Bufread Snakefile set filetype=snakemake
+au BufNewFile,Bufread *.smk set filetype=snakemake
+]]
