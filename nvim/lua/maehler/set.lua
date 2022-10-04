@@ -26,3 +26,11 @@ vim.cmd [[
 au BufNewFile,Bufread Snakefile set filetype=snakemake
 au BufNewFile,Bufread *.smk set filetype=snakemake
 ]]
+
+-- Wrap Markdown files
+vim.cmd [[
+augroup TextWrap
+    autocmd!
+    autocmd FileType markdown setlocal wrap
+augroup END
+]]
