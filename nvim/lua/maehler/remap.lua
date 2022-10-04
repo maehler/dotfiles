@@ -1,4 +1,8 @@
-local nnoremap = require("maehler.keymap").nnoremap
+local builtin = require("telescope.builtin")
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
-nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
+-- Telescope
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+
+-- Netrw
+vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>", {})
