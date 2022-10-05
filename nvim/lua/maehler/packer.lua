@@ -22,6 +22,9 @@ return require("packer").startup(function()
 --            { "nvim-treesitter/nvim-treesitter" },
         },
     }
+    use {
+        "nvim-telescope/telescope-file-browser.nvim"
+    }
     use "kyazdani42/nvim-web-devicons"
 
     -- Languages
