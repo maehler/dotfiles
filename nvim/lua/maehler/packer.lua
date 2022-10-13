@@ -38,5 +38,8 @@ return require("packer").startup(function()
     use {
         "Mxrcon/nextflow-vim",
     }
+
+    -- LSP
+    use "neovim/nvim-lspconfig"
 end)
 

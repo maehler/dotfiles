@@ -49,3 +49,7 @@ if [ ! -d /home/nima18/.local/share/nvim/site/pack/packer/start/packer.nvim ]; t
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
         ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
+
+if ! which pyright &>/dev/null; then
+    echo >&2 "warning: pyright is not installed, install with npm"
+fi
