@@ -11,6 +11,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.colorcolumn = "80"
+vim.opt.signcolumn = "yes:1"
 
 vim.opt.wrap = false
 
