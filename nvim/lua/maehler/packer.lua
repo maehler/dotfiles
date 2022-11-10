@@ -7,6 +7,7 @@ return require("packer").startup(function()
     -- Themes
     use "folke/tokyonight.nvim"
     use "ellisonleao/gruvbox.nvim"
+    use "marko-cerovac/material.nvim"
     use "feline-nvim/feline.nvim"
 
     -- tpope
