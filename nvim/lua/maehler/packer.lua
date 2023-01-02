@@ -27,6 +27,7 @@ return require("packer").startup(function()
         "nvim-telescope/telescope-file-browser.nvim"
     }
     use "kyazdani42/nvim-web-devicons"
+    use "ThePrimeagen/harpoon"
 
     -- Languages
     use {
