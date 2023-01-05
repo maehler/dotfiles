@@ -54,7 +54,7 @@ if ! which pyright &>/dev/null; then
     echo >&2 "warning: pyright is not installed, install with npm"
 fi
 
-case "$SHELL" in
+case $(basename "$SHELL") in
     bash)
         if [[ ! -d "$HOME/.oh-my-bash" ]]; then
             bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
