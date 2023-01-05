@@ -53,3 +53,15 @@ fi
 if ! which pyright &>/dev/null; then
     echo >&2 "warning: pyright is not installed, install with npm"
 fi
+
+case "$SHELL" in
+    bash)
+        if [[ ! -d "$HOME/.oh-my-bash" ]]; then
+            bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+        fi
+        mv "$HOME/.oh-my-bash/custom{,-bkp}"
+        cp -r "${DOTFILE_PATH}/oh-my-bash/custom" "$HOME/.oh-my-bash/"
+        mv "$HOME/.bashrc{,-bkp}"
+        cp "${DOTFILE_PATH/oh-my-bash/bashrc}" "$HOME/.bashrc"
+        ;;
+esac
