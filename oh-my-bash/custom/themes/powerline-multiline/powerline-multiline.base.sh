@@ -37,7 +37,7 @@ function __powerline_prompt_segment {
   if [[ "${SEGMENTS_AT_PROMPT}" -gt 0 ]]; then
     separator="$(set_color ${LAST_SEGMENT_COLOR} ${params[1]})${separator_char}${_omd_prompt_normal}"
   fi
-  BOTTOM_PROMPT+="${separator}$(set_color 214 ${params[1]}) ${params[0]} ${_omb_prompt_normal}"
+  BOTTOM_PROMPT+="${separator}$(set_color 245 ${params[1]}) ${params[0]} ${_omb_prompt_normal}"
   LAST_SEGMENT_COLOR=${params[1]}
   (( SEGMENTS_AT_LEFT += 1 ))
 }
