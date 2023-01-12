@@ -59,9 +59,15 @@ case $(basename "$SHELL") in
         if [[ ! -d "$HOME/.oh-my-bash" ]]; then
             bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
         fi
-        mv "$HOME/.oh-my-bash/custom{,-bkp}"
-        cp -r "${DOTFILE_PATH}/oh-my-bash/custom" "$HOME/.oh-my-bash/"
-        mv "$HOME/.bashrc{,-bkp}"
-        cp "${DOTFILE_PATH/oh-my-bash/bashrc}" "$HOME/.bashrc"
+
+        if [ -d "$HOME/.oh-my-bash/custom" ]; then
+            mv $HOME/.oh-my-bash/custom{,-bkp$(date  +"%Y%m%d-%H%M%S")}
+        fi
+        ln -srf "${DOTFILE_PATH}/oh-my-bash/custom" "$HOME/.oh-my-bash/"
+
+        if [ -f "$HOME/.bashrc" ]; then
+            mv $HOME/.bashrc{,-bkp$(date +"%Y%m%d-%H%M%S")}
+        fi
+        ln -srf "${DOTFILE_PATH}/oh-my-bash/bashrc" "$HOME/.bashrc"
         ;;
 esac
