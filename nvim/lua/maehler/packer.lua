@@ -20,7 +20,7 @@ return require("packer").startup(function()
         requires = {
             { "nvim-lua/plenary.nvim" },
             { "nvim-telescope/telescope-fzf-native.nvim" },
---            { "nvim-treesitter/nvim-treesitter" },
+            { "nvim-treesitter/nvim-treesitter" },
         },
     }
     use {
