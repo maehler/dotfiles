@@ -10,6 +10,11 @@ return require("packer").startup(function()
     use "marko-cerovac/material.nvim"
     use "feline-nvim/feline.nvim"
 
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
+
     -- tpope
     use "tpope/vim-surround"
 
