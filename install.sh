@@ -56,10 +56,6 @@ if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
         ${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 
-if ! which pyright &>/dev/null; then
-    echo >&2 "warning: pyright is not installed, install with npm"
-fi
-
 case $(basename "$SHELL") in
     bash)
         if [[ ! -d "$HOME/.oh-my-bash" ]]; then
