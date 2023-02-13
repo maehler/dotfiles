@@ -51,9 +51,9 @@ ln \
     ${HOME}/.config/nvim/
 
 # Packer for neovim
-if [ ! -d /home/nima18/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
+if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+        ${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 
 if ! which pyright &>/dev/null; then
