@@ -37,7 +37,7 @@ SCM_THEME_PROMPT_SUFFIX=""
 
 SCM_THEME_PROMPT_DIRTY=" ${_omb_prompt_bold_brown}✗${_omb_prompt_normal}"
 SCM_THEME_PROMPT_CLEAN=" ${_omb_prompt_bold_green}✓${_omb_prompt_normal}"
-SCM_GIT_CHAR="${_omb_prompt_bold_green}±${_omb_prompt_normal}"
+SCM_GIT_CHAR="${_omb_prompt_bold_green}\uf1d2${_omb_prompt_normal}"
 SCM_SVN_CHAR="${_omb_prompt_bold_teal}⑆${_omb_prompt_normal}"
 SCM_HG_CHAR="${_omb_prompt_bold_brown}☿${_omb_prompt_normal}"
 
