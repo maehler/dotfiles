@@ -73,3 +73,8 @@ case $(basename "$SHELL") in
         ln -srf "${DOTFILE_PATH}/oh-my-bash/bashrc" "$HOME/.bashrc"
         ;;
 esac
+
+# Node version manager
+if [ -z ${NVM_DIR-} ]; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+fi
