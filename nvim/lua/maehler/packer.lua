@@ -17,6 +17,7 @@ return require("packer").startup(function()
 
     -- tpope
     use "tpope/vim-surround"
+    use "tpope/vim-fugitive"
 
     -- Navigation
     use {
