@@ -41,9 +41,6 @@ return require("packer").startup(function()
         rtp = "misc/vim",
     }
     use {
-        "yuezk/vim-js",
-    }
-    use {
         "Mxrcon/nextflow-vim",
     }
 
@@ -71,4 +68,3 @@ return require("packer").startup(function()
         }
     }
 end)
-
