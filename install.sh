@@ -72,6 +72,12 @@ case $(basename "$SHELL") in
         fi
         ln -sf "${DOTFILE_PATH}/oh-my-bash/bashrc" "$HOME/.bashrc"
         ;;
+    zsh)
+        if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        fi
+        ln -sf "${DOTFILE_PATH}/oh-my-zsh/zshrc" "$HOME/.zshrc"
+        ;;
 esac
 
 # Node version manager
