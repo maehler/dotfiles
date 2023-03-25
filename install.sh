@@ -17,7 +17,7 @@ fi
 if [ -f ${HOME}/.tmux.conf ]; then
     mv ${HOME}/.tmux.conf{,-bkp}
 fi
-ln -srf ${DOTFILE_PATH}/tmux.conf ${HOME}/.tmux.conf
+ln -sf ${DOTFILE_PATH}/tmux.conf ${HOME}/.tmux.conf
 
 # Install vim config
 if [ -f ${HOME}/.vimrc ]; then
@@ -36,9 +36,9 @@ if [ ! -d ${HOME}/.vim/ftdetect ]; then
 	mkdir ${HOME}/.vim/ftdetect
 fi
 
-ln -srf ${DOTFILE_PATH}/vimrc ${HOME}/.vimrc
-ln -srf ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
-ln -srf ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
+ln -sf ${DOTFILE_PATH}/vimrc ${HOME}/.vimrc
+ln -sf ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
+ln -sf ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
 
 # Install neovim config
 if [ ! -d ${HOME}/.config/nvim ]; then
@@ -46,7 +46,7 @@ if [ ! -d ${HOME}/.config/nvim ]; then
 fi
 
 ln \
-    -srf \
+    -sf \
     ${DOTFILE_PATH}/nvim/{init.lua,lua,after,data} \
     ${HOME}/.config/nvim/
 
@@ -65,12 +65,12 @@ case $(basename "$SHELL") in
         if [ -d "$HOME/.oh-my-bash/custom" ]; then
             mv $HOME/.oh-my-bash/custom{,-bkp$(date  +"%Y%m%d-%H%M%S")}
         fi
-        ln -srf "${DOTFILE_PATH}/oh-my-bash/custom" "$HOME/.oh-my-bash/"
+        ln -sf "${DOTFILE_PATH}/oh-my-bash/custom" "$HOME/.oh-my-bash/"
 
         if [ -f "$HOME/.bashrc" ]; then
             mv $HOME/.bashrc{,-bkp$(date +"%Y%m%d-%H%M%S")}
         fi
-        ln -srf "${DOTFILE_PATH}/oh-my-bash/bashrc" "$HOME/.bashrc"
+        ln -sf "${DOTFILE_PATH}/oh-my-bash/bashrc" "$HOME/.bashrc"
         ;;
 esac
 
