@@ -44,6 +44,9 @@ return require("packer").startup(function()
         "Mxrcon/nextflow-vim",
     }
 
+    -- Indentation guides
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
