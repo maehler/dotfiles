@@ -7,6 +7,12 @@ lsp.preset({
     suggest_lst_servers = false,
 })
 
+lsp.on_attach(function(client, bufnr)
+    lsp.default_keymaps({bufnr = bufnr})
+    vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+end)
+ 
 local cmp = require("cmp")
 
 local cmp_select = { behaviour = cmp.SelectBehavior.Select }
