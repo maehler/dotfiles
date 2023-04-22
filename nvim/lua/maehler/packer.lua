@@ -44,6 +44,8 @@ return require("packer").startup(function()
         "Mxrcon/nextflow-vim",
     }
 
+    use "Exafunction/codeium.vim"
+
     -- Indentation guides
     use "lukas-reineke/indent-blankline.nvim"
 
