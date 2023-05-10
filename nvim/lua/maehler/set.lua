@@ -18,4 +18,6 @@ vim.opt.wrap = false
 
 vim.opt.modeline = false
 
+vim.opt.mouse = ""
+
 vim.g.mapleader = " "
