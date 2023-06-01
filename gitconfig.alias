@@ -6,5 +6,6 @@
     dcw = diff --cached --word-diff
     ci = commit
     hist = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    hh = log --graph --pretty=format:'%C(yellow)%h: %Cgreen%ad%Cred%d %Creset%n%s%Cblue //%cn%n' --decorate --date=short
     b = branch
     ch = checkout
