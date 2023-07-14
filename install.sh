@@ -14,10 +14,10 @@ if [ ! -e "$HOME/.gitconfig" ] || \
 fi
 
 # tmux config
-if [ -f ${HOME}/.tmux.conf ]; then
-    mv ${HOME}/.tmux.conf{,-bkp}
+if [ -d ${HOME}/.config/tmux ]; then
+    mv ${HOME}/.config/tmux{,-bkp}
 fi
-ln -sf ${DOTFILE_PATH}/tmux.conf ${HOME}/.tmux.conf
+ln -sf ${DOTFILE_PATH}/tmux ${HOME}/.config/tmux
 
 # Install vim config
 if [ -f ${HOME}/.vimrc ]; then
