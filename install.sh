@@ -13,6 +13,12 @@ if [ ! -e "$HOME/.gitconfig" ] || \
         "${HOME}/.gitconfig"
 fi
 
+# alacritty
+if [ -d ${HOME}/.config/alacritty ]; then
+    mv ${HOME}/.config/alacritty{,-bkp}
+fi
+ln -sf ${DOTFILE_PATH}/alacritty ${HOME}/.config/alacritty
+
 # tmux config
 if [ -d ${HOME}/.config/tmux ]; then
     mv ${HOME}/.config/tmux{,-bkp}
