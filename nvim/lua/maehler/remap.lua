@@ -8,8 +8,6 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<C-u>", "<C-u>zz");
 vim.keymap.set("n", "<C-d>", "<C-d>zz");
 
--- tmux navigation
-vim.keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>")
-vim.keymap.set("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>")
-vim.keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>")
-vim.keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>")
+-- Delete surrounding function
+vim.keymap.set("n", "dsf", "ds(db")
+vim.keymap.set("n", "csf", "dsfi")
