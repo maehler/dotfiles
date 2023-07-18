@@ -172,7 +172,7 @@ local ViMode = {
     },
     provider = function(self)
         local vimGlyph = require("nvim-web-devicons").get_icon("", ".vimrc")
-        return "%2("..vimGlyph.." "..self.mode_names[self.mode].."%)"
+        return "" .. vimGlyph .. "%2("..self.mode_names[self.mode].."%)" .. ""
     end,
     hl = function(self)
         local mode = self.mode:sub(1, 1)
@@ -187,6 +187,23 @@ local ViMode = {
     },
 }
 
+local Ruler = {
+    provider = "%7(%l/%3L%):%2c %P",
+    hl = { fg = "gold" },
+}
+
+local LSPActive = {
+    condition = conditions.lsp_attached,
+    update = { "LspAttach", "LspDetach" },
+    provider = function()
+        local names = {}
+        for i, server in pairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
+            table.insert(names, server.name)
+        end
+        return " [" .. table.concat(names, ", ") .. "]"
+    end,
+    hl = { fg = "green", bold = true },
+}
 
 local statusline = {
     Space,
@@ -196,6 +213,10 @@ local statusline = {
     Space,
     Git,
     Align,
+    LSPActive,
+    Space,
+    Ruler,
+    hl = { bg = "gray20" },
 }
 
 require("heirline").setup({
