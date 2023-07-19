@@ -4,15 +4,19 @@ lsp.preset({
     name = "minimal",
     set_lsp_keymaps = true,
     manage_nvim_cmp = true,
-    suggest_lst_servers = false,
+    suggest_lsp_servers = false,
 })
 
 lsp.on_attach(function(client, bufnr)
-    lsp.default_keymaps({bufnr = bufnr})
+    local opts = { buffer = bufnr }
+    lsp.default_keymaps(opts)
     vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+    vim.keymap.set({ "n", "x" }, "<leader>gf", function()
+        vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
+    end, opts)
 end)
- 
+
 local cmp = require("cmp")
 
 local cmp_select = { behaviour = cmp.SelectBehavior.Select }
