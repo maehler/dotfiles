@@ -86,6 +86,10 @@ case $(basename "$SHELL") in
         ;;
 esac
 
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+fi
+
 # Node version manager
 if [ -z ${NVM_DIR-} ]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
