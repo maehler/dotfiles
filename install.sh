@@ -92,5 +92,5 @@ fi
 
 # Node version manager
 if [ -z ${NVM_DIR-} ]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+    curl -Lo- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 fi
