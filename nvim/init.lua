@@ -114,8 +114,16 @@ require("lazy").setup({
 	},
 }, {})
 
+-- [[ Basic settings ]]
+--
 -- disable highlight on search
 vim.o.hlsearch = false
+
+-- use 4 space indenting by default
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 
 -- line numbers
 vim.wo.number = true
@@ -140,6 +148,8 @@ vim.cmd [[colorscheme tokyonight]]
 -- use terminal colors
 vim.o.termguicolors = true
 
+-- [[ Basic keymaps ]]
+--
 -- keymaps for a better default experience
 -- disable space in normal and visual mode
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
