@@ -158,6 +158,9 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- git bindings
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
+-- netrw
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "[P]roject [V]iew in netrw" })
+
 -- set up statusline
 require("lualine").setup({
 	options = {
