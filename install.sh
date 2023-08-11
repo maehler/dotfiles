@@ -20,10 +20,7 @@ fi
 ln -sf ${DOTFILE_PATH}/alacritty ${HOME}/.config/alacritty
 
 # tmux config
-if [ -d ${HOME}/.config/tmux ]; then
-    mv ${HOME}/.config/tmux{,-bkp}
-fi
-ln -sf ${DOTFILE_PATH}/tmux ${HOME}/.config/tmux
+ln -sf ${DOTFILE_PATH}/tmux/tmux.conf ${HOME}/.tmux.conf
 
 # Install vim config
 if [ -f ${HOME}/.vimrc ]; then
