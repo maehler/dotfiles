@@ -112,6 +112,9 @@ require("lazy").setup({
 		},
 		build = ":TSUpdate",
 	},
+
+	-- snakemake syntax, until the treesitter version is finished (if ever)
+	"raivivek/vim-snakemake",
 }, {})
 
 -- [[ Basic settings ]]
