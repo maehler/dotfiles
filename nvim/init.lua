@@ -124,6 +124,7 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
+vim.o.smartindent = true
 
 -- line numbers
 vim.wo.number = true
@@ -131,12 +132,6 @@ vim.wo.relativenumber = true
 
 -- use sign column by default
 vim.wo.signcolumn = "yes"
-
--- default indent behaviour
-vim.o.tabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
-vim.o.smartindent = true
 
 -- decrease the updatetime
 vim.o.updatetime = 250
