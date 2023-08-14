@@ -133,6 +133,9 @@ vim.o.smartindent = true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- cursor margin to the end of the view
+vim.o.scrolloff = 8
+
 -- use sign column by default
 vim.wo.signcolumn = "yes"
 
