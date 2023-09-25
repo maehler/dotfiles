@@ -112,6 +112,16 @@ require("lazy").setup({
 		},
 		build = ":TSUpdate",
 	},
+
+	-- codeium
+	{
+		"Exafunction/codeium.vim",
+		config = function ()
+			vim.keymap.set("i", "<C-a>", function () return vim.fn["codeium#Accept"]() end, { expr = true })
+			vim.keymap.set("i", "<C-,>", function () return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
+			vim.keymap.set("i", "<C-.>", function () return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
+		end
+	}
 }, {})
 
 -- [[ Basic settings ]]
@@ -360,3 +370,6 @@ cmp.setup({
 		{ name = "luasnip" },
 	},
 })
+
+-- codeium setup
+vim.g.codeium_no_map_tab = 1
