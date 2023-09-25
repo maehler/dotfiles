@@ -373,3 +373,16 @@ cmp.setup({
 
 -- codeium setup
 vim.g.codeium_no_map_tab = 1
+
+-- custom filetypes
+vim.filetype.add({
+	extension = {
+		smk = "snakemake",
+	},
+	filename = {
+		["Snakefile"] = "snakefile"
+	},
+	pattern = {
+		["Snakefile.*"] = "snakefile"
+	},
+})
