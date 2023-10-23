@@ -80,10 +80,8 @@ require("lazy").setup({
 	-- indent guides
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		opts = {
-			char = "┊",
-			show_trailing_blankline_indent = false,
-		},
+		main = "ibl",
+		opts = {},
 	},
 
 	-- comment block selection with `gc`
@@ -178,6 +176,12 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 -- netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "[P]roject [V]iew in netrw" })
+
+-- indent-blankline
+require("ibl").setup {
+	indent = { char = "┊" },
+	scope = { enabled = false },
+}
 
 -- set up statusline
 require("lualine").setup({
