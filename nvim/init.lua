@@ -22,6 +22,7 @@ require("lazy").setup({
 	-- git
 	"tpope/vim-rhubarb",
 	"tpope/vim-fugitive",
+	"ThePrimeagen/git-worktree.nvim",
 
 	-- vim-surround, couldn't live without it
 	"tpope/vim-surround",
@@ -265,12 +266,16 @@ require("telescope").setup({
 	}
 })
 
+-- enable git-worktree telescope extension
+require("telescope").load_extension("git_worktree")
+
 -- enable telescipte fzf native
 pcall(require("telescope").load_extension, "fzf")
 
 -- telescope keybinds
 vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "[F]ind [F]iles" })
 vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_files, { desc = "Search [G]it [F]iles" })
+vim.keymap.set("n", "<leader>gt", require("telescope").extensions.git_worktree.git_worktrees, { desc = "List [G]it work[T]rees" })
 vim.keymap.set("n", "<leader>b", require("telescope.builtin").buffers, { desc = "Search existing [B]uffers" })
 vim.keymap.set("n", "<leader>ps", require("telescope.builtin").live_grep, { desc = "Grep [P]roject [S]earch" })
 vim.keymap.set("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols, { desc = "[D]ocument [S]ymbols" })
