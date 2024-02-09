@@ -104,6 +104,9 @@ require("lazy").setup({
 	-- harpoon
 	"theprimeagen/harpoon",
 
+	-- nextflow
+	"raivivek/nextflow-vim",
+
 	-- treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
