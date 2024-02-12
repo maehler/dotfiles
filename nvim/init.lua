@@ -399,9 +399,10 @@ vim.filetype.add({
 		smk = "snakemake",
 	},
 	filename = {
-		["Snakefile"] = "snakemake"
+		["Snakefile"] = "snakemake",
+		["nextflow.config"] = "groovy",
 	},
 	pattern = {
-		["Snakefile.*"] = "snakemake"
+		["Snakefile.*"] = "snakemake",
 	},
 })
