@@ -43,6 +43,8 @@ require("lazy").setup({
 		},
 	},
 
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
 	-- statusline
 	{
 		"nvim-lualine/lualine.nvim",
@@ -154,7 +156,10 @@ vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 
 -- theme
-vim.cmd [[colorscheme tokyonight]]
+require("catppuccin").setup({
+	flavour = "mocha",
+})
+vim.cmd.colorscheme "catppuccin"
 
 -- use terminal colors
 vim.o.termguicolors = true
