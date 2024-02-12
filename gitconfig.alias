@@ -10,3 +10,4 @@
     b = branch
     ch = checkout
     fetchfix = config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+    fpush = push --force-with-lease
