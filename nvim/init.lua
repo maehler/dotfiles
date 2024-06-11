@@ -126,7 +126,28 @@ require("lazy").setup({
 			vim.keymap.set("i", "<C-,>", function () return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
 			vim.keymap.set("i", "<C-.>", function () return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
 		end
-	}
+	},
+
+	-- delimited files
+	{
+		"cameron-wags/rainbow_csv.nvim",
+		config = true,
+		ft = {
+			"csv",
+			"tsv",
+			"csv_semicolon",
+			"csv_whitespace",
+			"csv_pipe",
+			"rfc_csv",
+			"rfc_semicolon",
+		},
+		cmd = {
+			"RainbowDelim",
+			"RainbowDelimSimple",
+			"RainbowDelimQuoted",
+			"RainbowMultiDelim",
+		}
+	},
 }, {})
 
 -- [[ Basic settings ]]
