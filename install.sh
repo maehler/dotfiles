@@ -59,6 +59,12 @@ if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
         ${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 
+# Install oh-my-posh
+if ! type oh-my-posh &> /dev/null; then
+    mkdir -p ${HOME}/.local
+    curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ${HOME}/.local/bin
+fi
+
 case $(basename "$SHELL") in
     bash)
         if [[ ! -d "$HOME/.oh-my-bash" ]]; then
@@ -79,7 +85,7 @@ case $(basename "$SHELL") in
         if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
             sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
         fi
-        ln -sf "${DOTFILE_PATH}/oh-my-zsh/zshrc" "$HOME/.zshrc"
+        ln -sf "${DOTFILE_PATH}/zshrc" "$HOME/.zshrc"
         ;;
 esac
 
