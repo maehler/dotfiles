@@ -15,9 +15,8 @@ fi
 
 # alacritty
 if [ -d ${HOME}/.config/alacritty ]; then
-    mv ${HOME}/.config/alacritty{,-bkp}
+    ln -sf ${DOTFILE_PATH}/alacritty/alacritty.toml ${HOME}/.config/alacritty
 fi
-ln -sf ${DOTFILE_PATH}/alacritty ${HOME}/.config/alacritty
 
 # tmux config
 ln -sf ${DOTFILE_PATH}/tmux/tmux.conf ${HOME}/.tmux.conf
@@ -97,3 +96,5 @@ fi
 if [ -z ${NVM_DIR-} ]; then
     curl -Lo- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 fi
+
+exec $SHELL

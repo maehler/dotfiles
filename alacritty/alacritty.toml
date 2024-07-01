@@ -1,0 +1,19 @@
+# [env]
+# TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "Hack Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+
+[selection]
+save_to_clipboard = true
