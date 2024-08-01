@@ -364,6 +364,12 @@ local servers = {
 			telemetry = { enable = false },
 		},
 	},
+	gopls = {
+		analyses = {
+			unusedparams = true,
+		},
+		staticcheck = true,
+	},
 }
 
 -- setup neovim lua configuration
