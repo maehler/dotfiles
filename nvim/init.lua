@@ -120,11 +120,15 @@ require("lazy").setup({
 
 	-- codeium
 	{
-		"Exafunction/codeium.vim",
+		"Exafunction/codeium.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
 		config = function ()
-			vim.keymap.set("i", "<C-a>", function () return vim.fn["codeium#Accept"]() end, { expr = true })
-			vim.keymap.set("i", "<C-,>", function () return vim.fn["codeium#CycleCompletions"](1) end, { expr = true })
-			vim.keymap.set("i", "<C-.>", function () return vim.fn["codeium#CycleCompletions"](-1) end, { expr = true })
+			require("codeium").setup({
+				enable_chat = true,
+			})
 		end
 	},
 
@@ -408,11 +412,9 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
+		{ name = "codeium" },
 	},
 })
-
--- codeium setup
-vim.g.codeium_no_map_tab = 1
 
 -- custom filetypes
 vim.filetype.add({
