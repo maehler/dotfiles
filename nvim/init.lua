@@ -127,7 +127,7 @@ require("lazy").setup({
 		},
 		config = function ()
 			require("codeium").setup({
-				enable_chat = true,
+				enable_chat = false,
 			})
 		end
 	},
