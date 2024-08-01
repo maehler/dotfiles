@@ -324,6 +324,9 @@ vim.keymap.set("n", "<leader>/", function()
 	}))
 end, { desc = "[/] Fuzzy find in current buffer" })
 
+-- Tab is doing funky stuff, make it stop...
+vim.keymap.set("n", "<TAB>", "<Nop>")
+
 -- harpoon setup
 vim.keymap.set("n", "<leader>ha", require("harpoon.mark").add_file, { desc = "[H]arpoon [A]dd file" })
 vim.keymap.set("n", "<leader>hq", require("harpoon.ui").toggle_quick_menu, { desc = "Toggle Harpoon menu" })
