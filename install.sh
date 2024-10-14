@@ -17,7 +17,7 @@ fi
 # For alacritty to be configured, then the alacritty config directory has
 # to exist. If it doesn't, then the config will be installed.
 if [ -d ${HOME}/.config/alacritty ]; then
-    ln -sf ${DOTFILE_PATH}/alacritty/alacritty.toml ${HOME}/.config/alacritty/
+    ln -nsf ${DOTFILE_PATH}/alacritty/alacritty.toml ${HOME}/.config/alacritty/alacritty.toml
 fi
 
 # tmux config
