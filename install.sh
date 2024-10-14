@@ -14,8 +14,10 @@ if [ ! -e "$HOME/.gitconfig" ] || \
 fi
 
 # alacritty
+# For alacritty to be configured, then the alacritty config directory has
+# to exist. If it doesn't, then the config will be installed.
 if [ -d ${HOME}/.config/alacritty ]; then
-    ln -sf ${DOTFILE_PATH}/alacritty/alacritty.toml ${HOME}/.config/alacritty
+    ln -sf ${DOTFILE_PATH}/alacritty/alacritty.toml ${HOME}/.config/alacritty/
 fi
 
 # tmux config
@@ -43,14 +45,12 @@ ln -sf ${DOTFILE_PATH}/vim/ftplugin/* ${HOME}/.vim/ftplugin
 ln -sf ${DOTFILE_PATH}/vim/ftdetect/* ${HOME}/.vim/ftdetect
 
 # Install neovim config
-if [ ! -d ${HOME}/.config/nvim ]; then
-    mkdir -p ${HOME}/.config/nvim
+# If there already is a neovim config directory, back it up and replace with a symlink.
+if [ -d ${HOME}/.config/nvim ]; then
+    mv ${HOME}/.config/nvim ${HOME}/.config/nvim-bkp
 fi
 
-ln \
-    -sf \
-    ${DOTFILE_PATH}/nvim/{init.lua,lua,after,data} \
-    ${HOME}/.config/nvim/
+ln -s ${DOTFILE_PATH}/nvim ${HOME}/.config/nvim
 
 # Packer for neovim
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
