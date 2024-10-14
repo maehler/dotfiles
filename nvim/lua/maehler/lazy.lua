@@ -95,20 +95,6 @@ require("lazy").setup({
 		build = ":TSUpdate",
 	},
 
-	-- -- codeium
-	-- {
-	-- 	"Exafunction/codeium.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"hrsh7th/nvim-cmp",
-	-- 	},
-	-- 	config = function ()
-	-- 		require("codeium").setup({
-	-- 			enable_chat = false,
-	-- 		})
-	-- 	end
-	-- },
-
 	-- delimited files
 	{
 		"cameron-wags/rainbow_csv.nvim",
