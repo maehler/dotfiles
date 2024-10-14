@@ -7,8 +7,14 @@ local servers = {
   pyright = {},
   gopls = {},
   tailwindcss = {
-    filetypes = {'html', 'template'},
+    filetypes = {'html', 'gotmpl'},
   },
+  html = {
+    filetypes = {'html', 'gotmpl'},
+  },
+  htmx = {
+    filetypes = {'html', 'htmx', 'gotmpl'},
+  }
 }
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig

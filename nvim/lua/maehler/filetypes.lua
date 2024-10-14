@@ -2,6 +2,8 @@
 vim.filetype.add({
 	extension = {
 		smk = "snakemake",
+		gotmpl = "gotmpl",
+		tmpl = "gotmpl",
 	},
 	filename = {
 		["Snakefile"] = "snakemake",
