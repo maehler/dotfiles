@@ -4,7 +4,21 @@ local servers = {
   eslint = {},
   lua_ls = {},
   rust_analyzer = {},
-  pyright = {},
+  pylsp = {
+    pylsp = {
+      plugins = {
+        autopep8 = { enabled = false },
+        black = { enabled = true, line_length = 100 },
+        flake8 = { enabled = false },
+        pyls_isort = { enabled = true, profile = "black" },
+        jedi_completion = { fuzzy = true },
+        pycodestyle = { enabled = true, maxLineLength = 100 },
+        pylint = { enabled = false },
+        pylsp_mypy = { enabled = false },
+        pyflakes = { enabled = false },
+      },
+    },
+  },
   gopls = {},
   tailwindcss = {
     filetypes = { 'html', 'gotmpl' },
