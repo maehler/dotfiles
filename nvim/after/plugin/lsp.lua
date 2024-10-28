@@ -4,18 +4,37 @@ local servers = {
   eslint = {},
   lua_ls = {},
   rust_analyzer = {},
-  pylsp = {
-    pylsp = {
-      plugins = {
-        autopep8 = { enabled = false },
-        black = { enabled = true, line_length = 100 },
-        flake8 = { enabled = false },
-        pyls_isort = { enabled = true, profile = "black" },
-        jedi_completion = { fuzzy = true },
-        pycodestyle = { enabled = true, maxLineLength = 100 },
-        pylint = { enabled = false },
-        pylsp_mypy = { enabled = false },
-        pyflakes = { enabled = false },
+  -- pylsp = {
+  --   pylsp = {
+  --     plugins = {
+  --       autopep8 = { enabled = false },
+  --       black = { enabled = true, line_length = 100 },
+  --       flake8 = { enabled = false },
+  --       pyls_isort = { enabled = true, profile = "black" },
+  --       jedi_completion = { enabled = true, fuzzy = true },
+  --       pycodestyle = { enabled = true, maxLineLength = 100 },
+  --       pylint = { enabled = true },
+  --       pylsp_mypy = { enabled = true },
+  --       pyflakes = { enabled = false },
+  --     },
+  --   },
+  -- },
+  pyright = {
+    pyright = {
+      disableOrganizeImports = "test",
+    },
+    python = {
+      analysis = {
+        ignore = { '*' },
+      },
+    },
+  },
+  ruff = {
+    init_options = {
+      settings = {
+        lineLength = 100,
+        logLevel = "warn",
+        lint = { select = {"E", "F", "W"} },
       },
     },
   },
@@ -42,7 +61,9 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 require('mason-lspconfig').setup_handlers({
   function(name)
     require('lspconfig')[name].setup({
+      trace = "messages",
       capabilities = capabilities,
+      init_options = (servers[name] or {}).init_options,
       settings = servers[name],
       filetypes = (servers[name] or {}).filetypes,
     })
