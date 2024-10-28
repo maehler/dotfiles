@@ -32,3 +32,6 @@ vim.o.timeoutlen = 300
 
 -- use terminal colors
 vim.o.termguicolors = true
+
+-- when backing up, save a copy of the original and overwrite the original when saving
+vim.o.backupcopy = "yes"
