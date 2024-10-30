@@ -47,7 +47,11 @@ local servers = {
   },
   htmx = {
     filetypes = { 'html', 'htmx', 'gotmpl' },
-  }
+  },
+  groovyls = {
+    filetypes = { 'groovy', 'nextflow' },
+    classpath = { "$JAVA_HOME/lib" },
+  },
 }
 
 require('mason').setup({})
