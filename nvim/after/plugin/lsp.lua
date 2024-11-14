@@ -38,7 +38,12 @@ local servers = {
       },
     },
   },
-  gopls = {},
+  gopls = {
+    gopls = {
+      gofumpt = true,
+    },
+  },
+  golangci_lint_ls = {},
   tailwindcss = {
     filetypes = { 'html', 'gotmpl' },
   },
