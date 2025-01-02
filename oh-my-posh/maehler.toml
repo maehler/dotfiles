@@ -1,44 +1,49 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+version = 3
 
-version = 2
+[transient_prompt]
+  template = '❯ '
+  foreground = '#D4E157'
+  background = 'transparent'
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
 
   [[blocks.segments]]
-    type = 'session'
-    style = 'plain'
+    template = '{{ .HostName }} '
     foreground = 'green'
     background = 'transparent'
-    template = '{{ .HostName }} '
+    type = 'session'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
 
   [[blocks.segments]]
-    type = 'path'
-    style = 'plain'
+    template = '{{ .Path }} '
     foreground = 'blue'
     background = 'transparent'
-    template = '{{ .Path }} '
+    type = 'path'
+    style = 'plain'
 
     [blocks.segments.properties]
+      cache_duration = 'none'
       style = 'full'
 
   [[blocks.segments]]
-    type = 'git'
-    style = 'plain'
+    template = '{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }}'
     foreground = 'yellow'
     background = 'transparent'
-    background_templates = [
-      '{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}',
-      '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}',
-      '{{ if gt .Ahead 0 }}#B388FF{{ end }}',
-      '{{ if gt .Behind 0 }}#B388FB{{ end }}'
-    ]
-    template = '{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} {{ .StashCount }}{{ end }}'
+    type = 'git'
+    style = 'plain'
+    background_templates = ['{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}', '{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}', '{{ if gt .Ahead 0 }}#B388FF{{ end }}', '{{ if gt .Behind 0 }}#B388FB{{ end }}']
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
 
 [[blocks]]
   type = 'prompt'
@@ -46,16 +51,12 @@ version = 2
   newline = true
 
   [[blocks.segments]]
+    template = '❯ '
+    foreground = '#D4E157'
     type = 'status'
     style = 'plain'
-    foreground = '#D4E157'
     foreground_templates = ['{{ if gt .Code 0 }}#FF5252{{ end }}']
-    template = '❯ '
 
     [blocks.segments.properties]
       always_enabled = true
-
-[transient_prompt]
-  foreground = '#D4E157'
-  background = 'transparent'
-  template = '❯ '
+      cache_duration = 'none'
