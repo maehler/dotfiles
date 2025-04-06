@@ -13,6 +13,14 @@ if [ ! -e "$HOME/.gitconfig" ] || \
         "${HOME}/.gitconfig"
 fi
 
+if [ ! -d "$HOME/.config" ]; then
+	mkdir "$HOME/.config"
+fi
+
+if [ ! -d "$HOME/.local/bin" ]; then
+	mkdir -p "$HOME/.local/bin"
+fi
+
 # alacritty
 # For alacritty to be configured, then the alacritty config directory has
 # to exist. If it doesn't, then the config will be installed.
