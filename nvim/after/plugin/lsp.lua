@@ -93,4 +93,15 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set('n', '<F4>', function() vim.lsp.buf.code_action() end, opts)
 end)
 
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '●',
+    spacing = 2,
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
 lsp.setup()
