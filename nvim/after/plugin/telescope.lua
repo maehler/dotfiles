@@ -25,6 +25,7 @@ vim.keymap.set("n", "<leader>gc", require("telescope").extensions.git_worktree.c
 vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Search existing [B]uffers" })
 vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "Grep [P]roject [S]earch" })
 vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, { desc = "[D]ocument [S]ymbols" })
+vim.keymap.set("n", "<leader>dd", function() builtin.diagnostics({ bufnr = 0 }) end, { desc = "[D]ocument [D]diagnostics" })
 vim.keymap.set("n", "<leader>ws", builtin.lsp_dynamic_workspace_symbols, { desc = "[W]orkspace [S]ymbols" })
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 vim.keymap.set("n", "<leader>/", function()
