@@ -43,7 +43,14 @@ local servers = {
       gofumpt = true,
     },
   },
-  golangci_lint_ls = {},
+  golangci_lint_ls = {
+    default_config = {
+      cmd = { "golangci-lint-langserver" },
+    },
+    init_options = {
+      command = { "golangci-lint", "run", "--output.json.path", "stdout", "--show-stats=false", "--issues-exit-code=1" },
+    },
+  },
   tailwindcss = {
     filetypes = { 'html', 'gotmpl' },
   },
